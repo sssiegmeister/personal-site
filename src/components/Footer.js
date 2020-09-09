@@ -5,7 +5,7 @@ import resume from './../Sam_Siegmeister_Resume.pdf'
 class Footer extends Component {
   render() {
     var resumeLink = <a className="resume-link"href={resume} >resume</a>
-    var code = <a className="code-link" href="https://github.com/sssiegmeister">code</a> 
+    var code = <a className="code-link" href="https://github.com/sssiegmeister/personal-site">code</a> 
     var backlog = <a className="backlog-link" href="https://trello.com/b/97r6RQLp/personal-site">backlog</a>
     return (
         <div className="footer">
