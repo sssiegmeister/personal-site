@@ -2,7 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
-import Experience from './components/Experience';
+import Content from './components/Content';
+import Photos from './components/Photos';
 import Footer from './components/Footer';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
@@ -15,6 +16,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Box from '@material-ui/core/Box';
+import Exp from './Exp-Items';
+import Proj from './Proj-Items';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -82,7 +85,13 @@ function App() {
         <Home />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Experience />
+        <Content items={Exp}/>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <Content items={Proj}/>
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <Photos/>
       </TabPanel>
       <Footer />
     </div>
