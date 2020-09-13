@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import gradPic from './../images/bridge.jpeg'
+import campusPic from './../images/campus.png'
 function Home(props) {
   return (
       <div className="home-page">
@@ -31,13 +31,15 @@ function Home(props) {
               EXPERIENCE
             </Button>
           </p>
-          <img className="grad-pic" src={gradPic} alt="Grad picture"></img>    
+          <img className="campus-pic" src={campusPic} alt="Campus picture"></img>    
         </div>
 
         <div className="photo-section">
           <h3 className="photo-section-header">
-            I also take photos! View some of my favorites.
-            <Button className="photo-button" variant="outlined" color="inherit" renderAs="button" onClick={props.photoHandler}>
+            <div className="photo-text">
+              I also take photos! View some of my favorites.
+            </div>
+            <Button variant="outlined" color="inherit" renderAs="button" onClick={props.photoHandler}>
               PHOTOS
             </Button>
           </h3>
