@@ -1,5 +1,4 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 import Home from './components/Home';
 import Content from './components/Content';
@@ -8,13 +7,9 @@ import Footer from './components/Footer';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import Box from '@material-ui/core/Box';
 import Exp from './Exp-Items';
 import Proj from './Proj-Items';
@@ -65,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -73,7 +68,7 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="default">
         <Tabs value={value} onChange={handleChange} centered>
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Experience" {...a11yProps(1)} />
@@ -82,7 +77,7 @@ function App() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <Home />
+        <Home expHandler={() => setValue(1)} photoHandler={() => setValue(3)}/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Content items={Exp}/>
