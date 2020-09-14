@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
 function mediaType(props) {
   switch (props.type) {
@@ -12,6 +13,13 @@ function mediaType(props) {
         </video>
       );
       break;
+    case "download":
+      return (
+        <form method="get" action={props.media}>
+          <Button type="submit" variant="outlined">Download</Button>
+        </form>
+      )
+      break;
     default:
       return <img src={props.media} alt="Img"/>
   }
@@ -19,7 +27,7 @@ function mediaType(props) {
 
 function Media(props) {
 
-return(
+  return(
     <div className={"content " + props.direction}>
       <p className="info">
         {props.text}

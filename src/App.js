@@ -13,6 +13,7 @@ import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import Exp from './Exp-Items';
 import Proj from './Proj-Items';
+import Sims from './Sims-Items';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -74,6 +75,7 @@ function App() {
           <Tab label="Experience" {...a11yProps(1)} />
           <Tab label="Projects" {...a11yProps(2)} />
           <Tab label="Photography" {...a11yProps(3)} />
+          <Tab label="TS4 Mods" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -87,6 +89,9 @@ function App() {
       </TabPanel>
       <TabPanel value={value} index={3}>
         <Photos/>
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <Content items={Sims}/>
       </TabPanel>
       <Footer />
     </div>
