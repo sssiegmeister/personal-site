@@ -4,7 +4,7 @@ import resume from './../Sam_Siegmeister_Resume.pdf'
 
 function Footer() {
   const resumeLink = <a className="resume-link"href={resume} >resume</a>
-  const code = <a className="code-link" href="https://github.com/sssiegmeister/personal-site">code</a> 
+  const code = <a className="code-link" href="https://github.com/sssiegmeister/personal-site/tree/dev">code</a> 
   const backlog = <a className="backlog-link" href="https://trello.com/b/97r6RQLp/personal-site">backlog</a>
   return (
       <div className="footer">
