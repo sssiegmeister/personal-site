@@ -29,9 +29,10 @@ function Media(props) {
 
   return(
     <div className={"content " + props.direction}>
-      <p className="info">
-        {props.text}
-      </p>
+      <div className="info">
+        <p className="title">{props.title}</p>
+        <p className="decription">{props.text}</p>
+      </div>
       <div className={"media " + props.direction}>
         {mediaType(props)}
       </div>
