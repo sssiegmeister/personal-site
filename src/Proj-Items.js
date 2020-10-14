@@ -6,8 +6,8 @@ const data = [
   {
     name: "Story Board",
     text: "Capstone project for CS5610. A web-scale search engine for news, using the News API to present content from a variety of sources. Enables users to create accounts and save articles to view later. Built the UI with React + Redux, and the server and database using Elixir + Phoenix.",
-    media: storyboard,
-    type: "img",
+    media: "https://storyboard.siegmeister.io",
+    type: "link",
   },
   {
     name: "Robot Arm",
@@ -18,8 +18,8 @@ const data = [
   {
     name: "Phrases with Phriends",
     text: "Project for CS5610. Created an online scrabble board application with support for up to four players. Built the UI with React + Redux, and ran the server using Elixir + Phoenix.",
-    media: phrases,
-    type: "img",
+    media: "https://pwp.siegmeister.io",
+    type: "link",
   }
 ]
 

@@ -1,10 +1,14 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 
 function mediaType(props) {
   switch (props.type) {
     case "img":
       return <img src={props.media} alt="Logo"/>;
+      break;
+    case "link":
+      return <Link href={props.media}>Demo!</Link>
       break;
     case "video":
       return (
